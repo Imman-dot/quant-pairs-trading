@@ -19,7 +19,7 @@ def download_one(ticker: str, start="2015-01-01") -> None:
         raise ValueError(f"No data returned for {ticker}")
     out_path = Path("data", "raw", f"{ticker}.csv")
     out_path.parent.mkdir(parents=True, exist_ok=True)  # ensure folder
-    df.to_csv(out_path)
+    df.to_csv(out_path, index_label="Date")
     print(f"Saved {len(df):,} rows → {out_path.resolve()}")
 
 
