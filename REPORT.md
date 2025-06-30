@@ -4,7 +4,7 @@ I implemented and backtested a mean-reversion pairs strategy on correlated FTSE 
 
 What Is Pairs Trading?
 
-Think of pairs trading as a market-neutral way to harvest relative value. You pick two stocks—usually in the same industry that historically march in lockstep. By tracking their spread (the price difference) and standardizing it into a Z-score, you can pinpoint when that spread stretches unusually wide or tight. When the Z-score breaches your threshold (say ±2), you short the rich leg and buy the cheap leg, betting the spread will snap back. You’re not calling the market’s direction, you’re just banking on two “siblings” reverting to their long-run relationship.
+Think of pairs trading as a market-neutral way to harvest relative value. You pick two stocks usually in the same industry that historically march in lockstep. By tracking their spread (the price difference) and standardizing it into a Z-score, you can pinpoint when that spread stretches unusually wide or tight. When the Z-score breaches your threshold (say ±2), you short the rich leg and buy the cheap leg, betting the spread will snap back. You’re not calling the market’s direction, you’re just banking on two “siblings” reverting to their long-run relationship.
 
 Why the FTSE 350?
 
