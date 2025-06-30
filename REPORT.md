@@ -91,7 +91,7 @@ Notice how drawdowns in the strategy (small dips) are much shallower than in the
 
 This histogram displays the frequency of daily P\&L from the strategy
 The bulk of returns cluster around zero, reflecting many small gains and losses.
-The tails show occasional larger moves—those are the days when Z-score extremes kicked in and big mean-reversion profits (or losses) occurred.
+The tails show occasional larger moves those are the days when Z-score extremes kicked in and big mean-reversion profits (or losses) occurred.
 Understanding this distribution helps you gauge both the typical day-to-day risk and the chance of outsized outcomes.
 When we stack all the metrics side by side, HSBA.L vs BARC.L emerges as our clear winner. It delivered a 45 % total return with a Sharpe ratio north of 1.2, comfortably outpacing a simple buy-and-hold of HSBC (18 %).
 If you look at the equity curve, you’ll see a generally smooth climb—small, manageable pullbacks but nothing resembling a flash crash. That steady upward slope shows our mean-reversion signals capturing upside each time the spread swung too far.
