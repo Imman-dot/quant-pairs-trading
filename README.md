@@ -7,7 +7,7 @@ HSBA.L vs BARC.L returned ~45 % vs an 18 % buy-and-hold, Sharpe ≈ 1.2, max dra
 
 Quickstart:
 
-git clone … && cd quant-pairs-trading
+git clone cd quant-pairs-trading
 
 python -m venv .venv && .\.venv\Scripts\Activate.ps1
 
