@@ -1,0 +1,6 @@
+Final Strategy Return: -12.61%
+Final Benchmark Return: -65.05%
+Sharpe Ratio: -0.12
+Max Drawdown: -30.00%
+Total number of trades: 5
+Average return per trade: -2.5230%

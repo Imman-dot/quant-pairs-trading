@@ -14,3 +14,9 @@ for file in os.listdir(raw_dir):
         print(f"{file} has missing data in rows:")
         print(df[df.isna().any(axis=1)])
 
+# Clean a single file (example)
+df = pd.read_csv("data/raw/HSBA.L.csv")
+df = df[(df[['Open', 'High', 'Low', 'Close', 'Adj Close', 'Volume']] > 0).all(axis=1)]
+df = df.dropna()
+df.to_csv("data/raw/HSBA.L.csv", index=False)
+print("Cleaned HSBA.L.csv and saved back to raw directory.")

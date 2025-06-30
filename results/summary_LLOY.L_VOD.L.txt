@@ -1,0 +1,7 @@
+Pair: LLOY.L vs VOD.L
+Strategy Return: 0.00%
+Benchmark Return: -0.06%
+Sharpe Ratio: nan
+Max Drawdown: 0.00%
+Total Trades: 0
+Avg Return/Trade: nan%

@@ -1,0 +1,4 @@
+Threshold ±0.5 | Return: -38.62% | Trades: 6
+Threshold ±1.0 | Return: -7.57% | Trades: 4
+Threshold ±1.5 | Return: -22.19% | Trades: 4
+Threshold ±2.0 | Return: 23.66% | Trades: 2

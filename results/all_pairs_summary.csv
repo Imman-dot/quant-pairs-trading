@@ -1,0 +1,6 @@
+pair,strategy_return,benchmark_return,sharpe,max_drawdown,num_trades,avg_return_per_trade
+HSBA.L vs LLOY.L,0.3003,0.4416,0.38,-0.1283,19.0,0.0158
+BARC.L vs LLOY.L,0.2587,0.3693,0.33,-0.1116,17.0,0.0152
+BARC.L vs HSBA.L,0.35090000000000005,0.3693,0.31,-0.1297,8.0,0.043899999999999995
+LLOY.L vs VOD.L,0.0,-0.0006,,0.0,0.0,
+,,,,,,

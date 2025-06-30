@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Load data
 df = pd.read_csv("data/ftse350_prices.csv", parse_dates=["Date"])
-tickers = ['HSBA.L', 'BARC.L']
+tickers = ['VOD.L', 'BARC.L']
 
 # Plot each ticker
 for ticker in tickers:
@@ -25,7 +25,7 @@ ax = plt.gca()
 x_pos, y_pos = 0.05, 0.85  # Adjust if needed
 ax.text(x_pos, y_pos, f"Correlation: {cor:.2f}",
         transform=ax.transAxes, fontsize=12,
-        bbox=dict(facecolor='white', alpha=0.7, edgecolor='gray', boxstyle='round'))
+        bbox=dict(facecolor='black', alpha=0.7, edgecolor='gray', boxstyle='round'))
 
 print("Correlation is:", cor)
 print(df[df['Ticker'] == tickers[0]].head())

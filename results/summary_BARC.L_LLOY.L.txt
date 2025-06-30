@@ -1,0 +1,7 @@
+Pair: BARC.L vs LLOY.L
+Strategy Return: 25.87%
+Benchmark Return: 36.93%
+Sharpe Ratio: 0.33
+Max Drawdown: -11.16%
+Total Trades: 17
+Avg Return/Trade: 1.52%

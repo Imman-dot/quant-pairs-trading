@@ -1,0 +1,7 @@
+Pair: BARC.L vs HSBA.L
+Strategy Return: 35.09%
+Benchmark Return: 36.93%
+Sharpe Ratio: 0.31
+Max Drawdown: -12.97%
+Total Trades: 8
+Avg Return/Trade: 4.39%

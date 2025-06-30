@@ -2,9 +2,19 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+from pathlib import Path
+
+# Determine project root (one level up from this script)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+RESULTS_DIR   = PROJECT_ROOT / "results"
+RESULTS_DIR.mkdir(exist_ok=True)   # create it if it doesn't exist
+
+SUMMARY_FILE = RESULTS_DIR / "summary.txt"
+
+
 # --- Parameters ---
-PAIR = ['HSBA.L', 'BARC.L']  # Change these to your chosen pair
-Z_THRESHOLD = 1.0            # Entry threshold in z-score units
+PAIR = ['VOD.L', 'BARC.L']  # Change these to your chosen pair
+Z_THRESHOLD = 2.0            # Entry threshold in z-score units
 
 # --- Load data ---
 df = pd.read_csv("data/ftse350_prices.csv", parse_dates=["Date"])
@@ -54,3 +64,41 @@ print(f"Final strategy return: {equity[-1]:.2%}")
 
 print("Unique signals:", signals.unique())
 print("Number of trades triggered:", (signals != 0).sum())
+
+import numpy as np
+
+trade_signals = signals.diff().fillna(0).abs()  # Points where position changes
+num_trades = int((trade_signals > 0).sum())
+total_pnl = equity.iloc[-1]
+average_pnl = total_pnl / num_trades if num_trades > 0 else np.nan
+
+print(f"Total number of trades: {num_trades}")
+print(f"Final strategy return: {total_pnl:.2%}")
+print(f"Average return per trade: {average_pnl:.4%}")
+
+
+# Calculate returns as decimal
+final_strategy_return = equity.iloc[-1]
+final_benchmark_return = (prices1.iloc[-1] / prices1.iloc[0]) - 1
+
+# Calculate Sharpe Ratio (annualized, risk-free rate assumed 0)
+# Note: 252 trading days in a year
+strategy_daily_returns = returns.fillna(0)
+sharpe_ratio = (strategy_daily_returns.mean() / strategy_daily_returns.std()) * np.sqrt(252)
+
+# Calculate Max Drawdown
+cum_max = equity.cummax()
+drawdown = equity - cum_max
+max_drawdown = drawdown.min()
+
+
+with open(SUMMARY_FILE, "w") as f:
+    f.write(f"Final Strategy Return: {final_strategy_return:.2%}\n")
+    f.write(f"Final Benchmark Return: {final_benchmark_return:.2%}\n")
+    f.write(f"Sharpe Ratio: {sharpe_ratio:.2f}\n")
+    f.write(f"Max Drawdown: {max_drawdown:.2%}\n")
+    f.write(f"Total number of trades: {num_trades}\n")
+    f.write(f"Average return per trade: {average_pnl:.4%}\n")
+
+
+

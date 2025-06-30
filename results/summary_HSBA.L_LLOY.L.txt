@@ -1,0 +1,7 @@
+Pair: HSBA.L vs LLOY.L
+Strategy Return: 30.03%
+Benchmark Return: 44.16%
+Sharpe Ratio: 0.38
+Max Drawdown: -12.83%
+Total Trades: 19
+Avg Return/Trade: 1.58%
