@@ -1,3 +1,11 @@
+# PairsTrading-AlphaLab 🔗
+
+End-to-end **cointegration screener & cost-aware long–short back-tester** for equity pairs.
+
+## Key features
+- Vectorised back-test engine with slippage & commission  
+- Performance report: Sharpe, max-DD, turnover, underwater plots  
+
 Pairs Trading Project Using Cointegration(June 2025)
 
 The Quant Pairs-Trading project is something I built myself to show how financial strategies work in the real world. I focused on finding pairs of FTSE 350 stocks that usually move together, and set up a way to spot when their prices go out of sync and then return to normal. By using simple rules based on statistics, I tested how this approach would have performed in the past, tracking profits, losses, and risk along the way. The goal was to practice turning numbers into smart decisions and create results that would impress trading teams who look for people that can analyse markets and manage risk.
